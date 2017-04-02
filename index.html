@@ -3,6 +3,7 @@
 
 <head>
     <title>Crystals Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/reset.css" />    
    
@@ -17,8 +18,16 @@
 
 
 <body>
+    
+    <div class="container">
+        <div class="jumbotron">
+            
+    
     <h1>Crystals Collectors!</h1>
+         
+       
     <div id="content">
+        
 
     <p>You will be given a random number at he start of the game.</p>
 
@@ -32,17 +41,32 @@
 
     </div>
 
-    <div class="number-box">
-    	<p id="main-number">0</p>
-    </div>
 
-    <div>
-            <button id="crystal1"></button>
-            <button id="crystal2"></button>
-            <button id="crystal3"></button>
-        </div>
         
-    
+        <div class="row">
+            <div class="col-lg-4">
+        <span id="main-number">0</span>
+ 
+ </div>
+    <div class="col-lg-2">
+    <strong>Wins: </strong> <div id="win-counter">0</div>
+    <strong>Losses: </strong> <div id="loss-counter">0</div>
+        
+
+    <div class="crystal-image">
+            <input type="image" id="crystal1" style="height:100px;width:100px;" src="assets/images/Crushed_Basilisk_Crystals.jpg" />
+            <input type="image" id="crystal2" style="height:100px;width:100px;" src="assets/images/images.jpg" />
+            <input type="image" id="crystal3" style="height:100px;width:100px;" src="assets/images/pink_crystals_hd_widescreen_by_blopnuts.jpg" />
+            <input type="image" id="crystal4" style="height:100px;width:100px;" src="assets/images/crystal3.jpg" />
+         
+        </div>
+    <h6>Your total score is:</h6>
+            </div>
+        <div id="total-score">0</div>
+        
+        
+    </div>
+    </div>
     <script src="assets/javascript/game.js"></script>
 </body>
 
