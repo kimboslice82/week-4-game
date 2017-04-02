@@ -43,26 +43,48 @@ $("#crystal4").html(crystalNumber4);
 $("#total-score").html(counter); {
     console.log(counter);
 }
+    
+    function reset() {
+        $("#main-number").html(mainNumber);
+        $("#crystal1").html(crystalNumber1);
+        $("#crystal2").html(crystalNumber2);
+        $("#crystal3").html(crystalNumber3);
+        $("#crystal4").html(crystalNumber4); 
+        counter = 0;
+        
+    }
+    
+   
 
-
-
+//click events to add the scores in the counter
 $("#crystal1").click(function() {
-   $("#total-score").html(crystalNumber1);
-    }); 
+  counter = counter + crystalNumber1;
+    console.log("New counter= " + counter);
+    $("#total-score").text(counter); 
+     }); 
     
 $("#crystal2").click(function() {
-   $("#total-score").html(crystalNumber2);
+    counter = counter + crystalNumber2;
+    $("#total-score").text(counter);
     }); 
     
 $("#crystal3").click(function() {
-   $("#total-score").html(crystalNumber3);
+    counter = counter + crystalNumber3;
+    $("#total-score").text(counter);
     }); 
     
 $("#crystal4").click(function() {
-   $("#total-score").html(crystalNumber4);
+    counter = counter + crystalNumber4;
+    $("#total-score").text(counter);
     }); 
     
-    
+ if (counter === mainNumber) {
+        wins++; $("#win-counter").html(wins); reset();
+    }
+    else if (counter > mainNumber) {
+        losses++; $("#loss-counter").html(losses);  reset();
+                      
+    }
 
 
 });
