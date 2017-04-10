@@ -50,12 +50,32 @@ $("#win-counter").html(wins);
 $("#loss-counter").html(losses);  
 
 function reset()  {
+    mainNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19; {
+    console.log(mainNumber);
+}
+
+//the following generate the hidden crystal numbers from 1-12
+crystalNumber1 = Math.floor(Math.random() * (12 - 1 + 1)) + 1; {
+    console.log(crystalNumber1);
+}
+
+crystalNumber2 = Math.floor(Math.random() * (12 - 1 + 1)) + 1; {
+    console.log(crystalNumber2);
+}
+crystalNumber3 = Math.floor(Math.random() * (12 - 1 + 1)) + 1; {
+    console.log(crystalNumber3);
+}
+crystalNumber4 = Math.floor(Math.random() * (12 - 1 + 1)) + 1; {
+    console.log(crystalNumber4);
+}
+ 
         $("#main-number").html(mainNumber);
         $("#crystal1").html(crystalNumber1);
         $("#crystal2").html(crystalNumber2);
         $("#crystal3").html(crystalNumber3);
         $("#crystal4").html(crystalNumber4); 
         counter = 0;
+    
         
     };
 
@@ -68,7 +88,7 @@ $("#crystal1").click(function() {
     $("#total-score").text(counter); 
     
     if (counter === mainNumber) {
- 	wins++; reset(); $("#win-counter").html(wins);
+ 	wins++; $("#win-counter").html(wins); 
 
     }
     else if (counter > mainNumber) {
@@ -114,7 +134,7 @@ $("#crystal4").click(function() {
     }
     else if (counter > mainNumber) {
     	losses++; reset(); $("#loss-counter").html(losses);  
-                      
+                     
     }
     }); 
     
