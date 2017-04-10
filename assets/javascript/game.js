@@ -68,11 +68,11 @@ $("#crystal1").click(function() {
     $("#total-score").text(counter); 
     
     if (counter === mainNumber) {
- 	wins++; reset(); 
+ 	wins++; reset(); $("#win-counter").html(wins);
 
     }
     else if (counter > mainNumber) {
-    	losses++; reset();
+    	losses++; reset(); $("#loss-counter").html(losses);  
                       
     }
      }); 
@@ -82,11 +82,11 @@ $("#crystal2").click(function() {
     $("#total-score").text(counter);
     
     if (counter === mainNumber) {
- 	wins++; reset(); 
+ 	wins++; reset(); $("#win-counter").html(wins);
 
     }
     else if (counter > mainNumber) {
-    losses++; reset();
+    losses++; reset(); $("#loss-counter").html(losses);  
                       
     }
     }); 
@@ -96,11 +96,11 @@ $("#crystal3").click(function() {
     $("#total-score").text(counter);
     
     if (counter === mainNumber) {
- 	wins++; reset(); 
+ 	wins++; reset(); $("#win-counter").html(wins);
 
     }
     else if (counter > mainNumber) {
-    	losses++;reset();                      
+    	losses++; reset(); $("#loss-counter").html(losses);                     
     }
     }); 
     
@@ -109,11 +109,11 @@ $("#crystal4").click(function() {
     $("#total-score").text(counter);
     
     if (counter === mainNumber) {
- wins++; reset(); 
+ wins++; reset(); $("#win-counter").html(wins);
 
     }
     else if (counter > mainNumber) {
-    	losses++; reset();
+    	losses++; reset(); $("#loss-counter").html(losses);  
                       
     }
     }); 
